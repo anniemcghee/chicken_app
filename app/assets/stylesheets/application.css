@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.image {
+  width: 400px;
+  height: 300px;
+  border-radius: 80%;
+}
+
+.btn-primary:hover {
+  background-color: black;
+  border-style: none;
+}
+
+.btn-primary {
+  background-color: #96281B;
+  border-style: none;
+}
+
+img {
+  border-style: 2px solid black;
+}
+
+body {
+  background-color: #EEEEEE;
+}
+
+h1 {
+  font-family: 'Coustard', serif;
+  color: #96281B;
+}
+
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 16px;
+}
+
+.carousel-breeds {
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-inner > .item > img {
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-inner {
+  width: 100%;
+  margin: auto;
+}
+
+.navbar {
+  background: #96281B;
+  color: #EEEEEE;
+  border-style: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
