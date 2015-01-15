@@ -5,7 +5,7 @@ class ChickensController < ApplicationController
     # This code is for protected pages and is stored in Application Controller!
     # Adding a chicken and user profile are only protected pages
     # @user = User.find_by_id(session[:user_id])
-
+ before_action :is_authenticated?
     # redirect_to login_path unless @user
 
   def chickens
@@ -14,7 +14,7 @@ class ChickensController < ApplicationController
 
   def index
     @chicken = Chicken.all
-
+    @current_user = @current_user
   end
 
 
@@ -33,13 +33,15 @@ class ChickensController < ApplicationController
       render 'index'
     end
 
+    @chicken.tags.clear
+
     @tags = params[:chicken][:tag_ids].split(',')
 
         @tags.each do |tag|
           # binding.pry
-          Tag.find_or_create_by(name: tag)
+          # Tag.find_or_create_by(name: tag)
 
-          @chicken.tags << Tag.find_by_name(tag) unless tag.blank?
+          @chicken.tags << Tag.find_or_create_by(name: tag) unless tag.blank?
         end
 
   end

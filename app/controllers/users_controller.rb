@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @flock = @user.flocks.all
+    # @flock = @user.flocks.all
   end
 
 end

@@ -10,9 +10,7 @@
 
     <%= f.text_field :desc, :placeholder => "Brief Description" %>
 
-  <% @tags.each do |tag| %>
-    <%= f.text_field :tag_ids, 'value' => tag.name, 'data-role'=>'tagsinput' %>
-  <% end %>
+    <%= f.text_field :tag_ids, 'value' => @tags.map{|tag| tag.name }.join(","), 'data-role'=>'tagsinput' %>
 
     <h3><%= f.submit "Save changes", class: "btn btn-primary" %></h3>
 

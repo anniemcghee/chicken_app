@@ -3,9 +3,9 @@
 <head>
   <title>Chicken Finder</title>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Coustard:900|Fjalla+One' rel='stylesheet' type='text/css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -34,10 +34,10 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href='/users/<%= @current_user.id %>'><%= @current_user.name %>'s Profile</a><span class="sr-only">(current)</span></li>
+        <li><a href='/users/<%= @current_user.id %>'><h3><%= @current_user.name %>'s Profile</h3></a><span class="sr-only">(current)</span></li>
         <li><a href="/chickens"><h3>Browse Chickens</h3><span class="sr-only">(current)</span></a></li>
         <li><a href="/chickens/new"><h3>Add a Chicken</h3></a></li>
-        <li><%= link_to "Log Out", logout_path %><span class="sr-only">(current)</span></li>
+        <li><a href="/logout"><h3>Logout</h3><span class="sr-only">(current)</span></a></li>
       </ul>
     </div>
   </div>
@@ -73,8 +73,8 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a><%= link_to "Login", login_path %><span class="sr-only">(current)</span></a></li>
-        <li><a><%= link_to "Sign Up", signup_path %><span class="sr-only">(current)</span></a></li>
+        <li><a href="/login"><h3>Login</h3><span class="sr-only">(current)</span></a></li>
+        <li><a href="/signup"><h3>Signup</h3><span class="sr-only">(current)</span></a></li>
         <li><a href="/chickens"><h3>Browse Chickens</h3><span class="sr-only">(current)</span></a></li>
               </ul>
     </div>

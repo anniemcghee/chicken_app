@@ -3,15 +3,15 @@
 
 <%= bootstrap_form_for @chicken do |f| %>
 
-    <%= f.text_field :name, :placeholder => "Chicken Name" %>
+    <%= f.text_field :name, :placeholder => "Chicken Name", hide_label: true %>
 
-    <%= f.text_field :breed, :placeholder => "Breed" %>
+    <%= f.text_field :breed, :placeholder => "Breed", hide_label: true %>
 
-    <%= f.text_field :desc, :placeholder => "Brief Description" %>
+    <%= f.text_field :desc, :placeholder => "Brief Description", hide_label: true %>
 
-    <%= f.text_field :tag_ids, 'data-role'=>'tagsinput' %>
+    <%= f.text_field :tag_ids, :value => "", 'data-role'=>'tagsinput', hide_label: true %>
 
-    <%= f.submit "Create New Chicken", class: "btn btn-primary" %></h3>
+    <h3><%= f.submit "Create New Chicken", class: "btn btn-primary" %></h3>
 
 <% end %>
 </div>
