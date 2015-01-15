@@ -1,0 +1,28 @@
+
+
+Make current_user work - what's going on?
+What's up with nav bar if/else not working?
+
+Style tags
+Check in on tags refreshing
+Deleting tags from edit form / Adding is working but finding/creating isn't (only creating)
+
+Add profile page
+
+Add back button in nav bar
+
+Render reddit posts on show page
+
+  -need to add flock routes - maybe resources with except?
+
+  -Add user controller with CRUD
+  -Add views for login, signup and edit(?)
+
+  -How does flock get incorporated?
+  -You can create flock on user creation and designate flock on chicken creation
+  -You can edit flock name on your profile page
+
+
+
+
+

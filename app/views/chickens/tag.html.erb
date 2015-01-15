@@ -1,3 +1,5 @@
+<h1>Tagged <small><%= params[:tag].capitalize %></small></h1>
+
 <%= render :partial => "partials/flash" %>
 <!-- the above code is talking to my flash partial! see chickens controller for other step. -->
 <div class="container-fluid text-center">
@@ -15,7 +17,7 @@
   </div>
   </tr>
 </div>
-<% @chicken.each do |chicken| %>
+<% @chickens.each do |chicken| %>
 <tr>
 <td>
   <div class="col-md-3">
@@ -29,9 +31,6 @@
   </div>
   <div class="col-md-1">
       <h3><%= link_to "View", chicken, class: "btn btn-primary" %></h3>
-  </div>
-  <div class="col-md-2">
-      <h3><%= link_to "X", chicken, method: :delete, :data => {:confirm => "Are you sure?"}, class: "btn btn-primary" %></h3>
   </div>
 </td>
 </tr>

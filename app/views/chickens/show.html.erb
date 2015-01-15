@@ -1,3 +1,7 @@
+
+
+
+
 <div class="container-fluid">
 <div class="col-md-6 text-center">
 <h1>About <%= @chicken.name %>:</h1>
@@ -14,6 +18,11 @@
 <h3><%= @chicken.desc %></h3>
 </div>
 <hr>
+<div class="row text-center">
+<% @chicken.tags.each do |tag| %>
+  <h2><%= link_to tag.name, tag_path(tag.name) %></h2<br>
+<% end %>
+</div>
 <a href='/chickens/<%= @chicken.id %>/edit'><button type="button" class="btn btn-primary"><h3>Edit</h3></button></a>
 <br>
 </div>
@@ -45,5 +54,9 @@
   </a>
 </div>
 </div>
+<div class ="row">
+<% @reddit_posts.each do |post| %>
+
+<% end %>
 </div>
 

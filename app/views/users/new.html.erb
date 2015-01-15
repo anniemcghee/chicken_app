@@ -1,0 +1,16 @@
+<div class="row text-center">
+
+<h2>Sign Up</h2>
+
+<%= render :partial => "partials/flash" %>
+
+<%= bootstrap_form_for :user do |f| %>
+  <%= f.text_field :name, placeholder: "Enter your first name" %>
+  <%= f.text_field :email, placeholder: "Enter your email" %>
+  <%= f.text_field :zip, placeholder: "What is your zip code?" %>
+  <%= f.password_field :password, placeholder: "Enter a password" %>
+  <%= f.password_field :password_confirmation, placeholder: "Re-enter your password" %>
+  <%= f.submit %>
+<% end %>
+
+</div>

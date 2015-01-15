@@ -2,20 +2,19 @@
 <div class="row text-center">
 <h2>Editing <a href='/chickens/<%= @chicken.id %>'><%= @chicken.name %>:</a></h2>
 
-  <%= form_for @chicken do |f| %>
-<form>
-  <h3><div class="form-group">
+  <%= bootstrap_form_for @chicken do |f| %>
+
     <%= f.text_field :name, :placeholder => "Chicken Name" %>
-  </div>
-  <div class="form-group">
+
     <%= f.text_field :breed, :placeholder => "Breed" %>
-  </div>
-  <div class="form-group">
+
     <%= f.text_field :desc, :placeholder => "Brief Description" %>
-  </div></h3>
+
+  <% @tags.each do |tag| %>
+    <%= f.text_field :tag_ids, 'value' => tag.name, 'data-role'=>'tagsinput' %>
+  <% end %>
 
     <h3><%= f.submit "Save changes", class: "btn btn-primary" %></h3>
 
-</form>
 <% end %>
 </div>

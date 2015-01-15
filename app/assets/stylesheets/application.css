@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-tagsinput
  */
 
 .image {
@@ -19,6 +20,7 @@
   height: 300px;
   border-radius: 80%;
 }
+
 
 .btn-primary:hover {
   background-color: black;
@@ -71,6 +73,25 @@ h3 {
   background: #96281B;
   color: #EEEEEE;
   border-style: none;
+}
+
+
+.input {
+   width: 350px;
+  padding: 15px;
+}
+
+input.form-control {
+  border-radius: 25px;
+  padding-left: 15px;
+  background-color: #fff;
+  /*color: #000;*/
+}
+
+div.bootstrap-tagsinput {
+  background-color: #ffffff;
+  width: 350px;
+  padding: 15px;
 }
 
 a:hover {

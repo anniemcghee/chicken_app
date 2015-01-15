@@ -1,20 +1,17 @@
 <div class="row text-center">
 <h2>Add a new chicken!</h2>
 
-<%= form_for @chicken do |f| %>
-<form>
-  <h3><div class="form-group">
+<%= bootstrap_form_for @chicken do |f| %>
+
     <%= f.text_field :name, :placeholder => "Chicken Name" %>
-  </div>
-  <div class="form-group">
+
     <%= f.text_field :breed, :placeholder => "Breed" %>
-  </div>
-  <div class="form-group">
+
     <%= f.text_field :desc, :placeholder => "Brief Description" %>
-  </div>
+
+    <%= f.text_field :tag_ids, 'data-role'=>'tagsinput' %>
 
     <%= f.submit "Create New Chicken", class: "btn btn-primary" %></h3>
 
-</form>
 <% end %>
 </div>
