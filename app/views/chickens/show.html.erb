@@ -1,62 +1,83 @@
-
-
-
-
 <div class="container-fluid">
-<div class="col-md-6 text-center">
-<h1>About <%= @chicken.name %>:</h1>
 
-<%= image_tag @results[1], :class => "image" %>
+  <div class='row info-chicken'>
+<!-- ******* Chicken Picture & Name ******* -->
+    <div class="col-md-6 text-center">
+      <!-- Chicken Name -->
+      <h1><%= @chicken.name %></h1>
+      <!-- Header Image -->
+      <%= image_tag @results[1], :class => "image image-chicken" %>
+      <br>
+    </div>
+<!-- ******* Chicken Breed, Desc & Tags ******* -->
+    <div class='col-md-1'></div>
+    <div class='col-md-6'>
+      <!-- Chicken Breed & Edit Button -->
+      <div class='row'>
+        <div class='col-md-12'>
+          <h2>Breed:</h2>
+          <h3><%= @chicken.breed %></h3>
+        </div>
+      </div>
+      <!-- Chicken Desc -->
+      <div class='row'>
+        <div class="col-md-12">
+          <h2>Description:</h2>
+          <h3><%= @chicken.desc %></h3>
+        </div>
+      </div>
+      <!-- Chicken Tags -->
+      <div class="row">
+        <div class='col-md-12'>
+          <h2>Tags:</h2>
+          <h3><% @chicken.tags.each do |tag| %>
+            <%= link_to tag.name, tag_path(tag.name) %>,
+          <% end %></h3>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+          <a href='/chickens/<%= @chicken.id %>/edit'><button type="button" class="btn btn-primary edit-chicken glyphicon glyphicon-pencil"> Edit <%= @chicken.name %></button></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<br>
-<div class="col-md-6">
-<h2>Breed:</h2>
-<h3><%= @chicken.breed %></h3>
-</div>
-<div class="col-md-6">
-<h2>Description:</h2>
-<h3><%= @chicken.desc %></h3>
-</div>
-<hr>
-<div class="row text-center">
-<% @chicken.tags.each do |tag| %>
-  <h2><%= link_to tag.name, tag_path(tag.name) %></h2<br>
-<% end %>
-</div>
-<a href='/chickens/<%= @chicken.id %>/edit'><button type="button" class="btn btn-primary"><h3>Edit</h3></button></a>
-<br>
-</div>
+<br />
+<br />
 
-
-<div class="col-md-6">
-<h2>More <%= @chicken.breed %>s:</h2>
-
-<div id="carousel-breeds" class="carousel slide" data-ride="carousel" interval='2000'>
-
-      <div class="carousel-inner" text-center>
-
+<!-- ******* Chicken Carousel ******* -->
+  <div class='row'>
+    <div class='col-md-3'></div>
+    <div class='col-md-6 text-center'>
+      <h2><small>More <%= @chicken.breed %>s:</small></h2>
+      <div id="carousel-breeds" class="carousel slide" data-ride="carousel" interval='2000'>
+      <!-- Carousel Inner -->
+        <div class="carousel-inner" text-center>
+           <!-- Carousel Images -->
           <div class="active item">
-              <%= image_tag @results[0] %>
+            <%= image_tag @results[0] %>
           </div>
-
           <%  @results.each do |photo| %>
           <div class="item">
             <%= image_tag photo %>
           </div>
           <% end %>
+        </div>
+         <!-- Carousel Controls -->
+        <a class="left carousel-control" href="#carousel-breeds" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-breeds" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
       </div>
+    </div>
+  </div>
+    <div class ="row">
+      <% @reddit_posts.each do |post| %>
 
-  <a class="left carousel-control" href="#carousel-breeds" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-breeds" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div>
-</div>
-<div class ="row">
-<% @reddit_posts.each do |post| %>
-
-<% end %>
+      <% end %>
+    </div>
 </div>
 

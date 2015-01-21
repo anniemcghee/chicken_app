@@ -35,9 +35,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href='/users/<%= @current_user.id %>'><h3><%= @current_user.name %>'s Profile</h3></a><span class="sr-only">(current)</span></li>
-        <li><a href="/chickens"><h3>Browse Chickens</h3><span class="sr-only">(current)</span></a></li>
+        <li><a href="/about"><h3>About</h3><span class="sr-only"></span></a></li>
+        <li><a href="/chickens"><h3>Browse Chickens</h3><span class="sr-only"></span></a></li>
         <li><a href="/chickens/new"><h3>Add a Chicken</h3></a></li>
-        <li><a href="/logout"><h3>Logout</h3><span class="sr-only">(current)</span></a></li>
+        <li><a href="/logout"><h3>Logout</h3><span class="sr-only"></span></a></li>
       </ul>
     </div>
   </div>
@@ -47,10 +48,6 @@
 
 <div class="container">
   <div class="footer">
-    <div class="text-center">
-      <hr>
-      <a href='/about'><h1>About</h1></a>
-    </div>
   </div>
 </div>
 </div>
@@ -85,10 +82,6 @@
 
 <div class="container">
   <div class="footer">
-    <div class="text-center">
-      <hr>
-      <a href='/about'><h1>About</h1></a>
-    </div>
   </div>
 </div>
 </div>
