@@ -44,6 +44,21 @@ h3 {
   font-size: 16px;
 }
 
+.info-chicken {
+  margin-top: 35px;
+}
+
+.edit-chicken {
+  margin-top: 25px;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 16px;
+}
+
+.image-chicken {
+  box-shadow: 5px 5px 15px 2px #888888;
+  border-radius: 100%;
+}
+
 .carousel-breeds {
   width: 100%;
   margin: auto;
@@ -61,8 +76,12 @@ h3 {
 
 .navbar {
   background: #96281B;
-  color: #EEEEEE;
+ color: #96281B;
   border-style: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
 }
 
 
@@ -83,8 +102,29 @@ div.bootstrap-tagsinput {
   padding: 15px;
 }
 
+/* ------------ Carousel ------------ */
+.carousel-inner > .item > img {
+  width: 50%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control {
+  color: #96281B;
+  opacity: 100;
+  text-shadow: none;
+}
+
+/* ------------ Links ------------ */
+a:link {
+  color: #96281B;
+}
+
 a:hover {
   text-decoration: none;
+  color: #96281B;
 }
 
 .footer {
