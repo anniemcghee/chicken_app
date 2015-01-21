@@ -86,3 +86,7 @@ div.bootstrap-tagsinput {
 a:hover {
   text-decoration: none;
 }
+
+.footer {
+  height: 200px;
+}
